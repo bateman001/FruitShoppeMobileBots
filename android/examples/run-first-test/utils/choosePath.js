@@ -13,7 +13,7 @@ const Path = () => {
     ];
 
     const index = randomIntFromInterval(1, paths.length);
-    return paths[4];
+    return paths[index - 1];
 };
 
 const path = Path();
