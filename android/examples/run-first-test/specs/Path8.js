@@ -1,8 +1,9 @@
 const Page = require("../../pageobjects/page");
+const fruit = require("../utils/returnFruits");
 
 describe("Path8: Add Product -> Cart > Checkout > Success", () => {
-    it("can add grapes to cart", async () => {
-        await Page.scrollDownUntilTextFound("Green Beans");
+    it("can add fruit to cart", async () => {
+        await Page.scrollDownUntilTextFound(fruit.title);
         await Page.tapSelectorByText("ADD TO CART");
     });
 

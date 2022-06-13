@@ -1,8 +1,9 @@
 const Page = require("../../pageobjects/page");
+const fruit = require("../utils/returnFruits");
 
 describe("Path3: Dead Click + Success Grapes Checkout", () => {
-    it("can add Grapes to cart", async () => {
-        await Page.scrollDownUntilTextFound("Mangocados");
+    it("can add fruit to cart", async () => {
+        await Page.scrollDownUntilTextFound(fruit.title);
         await Page.tapSelectorByText("ADD TO CART");
     });
 

@@ -1,9 +1,10 @@
 const Page = require("../../pageobjects/page");
+const fruit = require("../utils/returnFruits");
 
 describe("Path1: Dead Click + Failed Green Bean Checkout", () => {
-    it("can add green beans to cart", async () => {
+    it("can add fruit to cart", async () => {
         await Page.waitForSelectorByText("Market");
-        await Page.scrollDownUntilTextFound("Cocktail Mix");
+        await Page.scrollDownUntilTextFound(fruit.title);
         await Page.tapSelectorByResourceId("com.fullstorydev.shoppedemo:id/btn_add_to_cart");
     });
 

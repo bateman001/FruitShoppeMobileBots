@@ -1,8 +1,9 @@
 const Page = require("../../pageobjects/page");
+const fruit = require("../utils/returnFruits");
 
 describe("Path4: Rage Click + Failed Green Bean Checkout", () => {
-    it("can add Green Beans to cart", async () => {
-        await Page.scrollDownUntilTextFound("Mangocados");
+    it("can add fruit to cart", async () => {
+        await Page.scrollDownUntilTextFound(fruit.title);
         await browser.pause(2000);
         await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/btn_add_to_cart");
         await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/btn_add_to_cart");
@@ -13,7 +14,7 @@ describe("Path4: Rage Click + Failed Green Bean Checkout", () => {
         await browser.pause(2000);
     });
 
-    it("can checkout green beans", async () => {
+    it("can checkout fruit", async () => {
         await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/btn_checkout");
         await browser.pause(1000);
     });

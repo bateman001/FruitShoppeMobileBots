@@ -1,8 +1,9 @@
 const Page = require("../../pageobjects/page");
+const fruit = require("../utils/returnFruits");
 
 describe("Path5: Failed Cherries Checkout - No Purchase Click", () => {
-    it("can add cherries to cart", async () => {
-        await Page.scrollDownUntilTextFound("Dragon Fruit");
+    it("can add fruit to cart", async () => {
+        await Page.scrollDownUntilTextFound(fruit.title);
         await Page.clickSelectorByResourceId("com.fullstorydev.shoppedemo:id/btn_add_to_cart");
     });
 
