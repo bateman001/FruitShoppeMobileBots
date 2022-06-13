@@ -145,9 +145,7 @@ const Google = [
     { device: "Google Pixel 2", os: "9.0" },
     { device: "Google Pixel 2", os: "8.0" },
     { device: "Google Pixel", os: "8.0" },
-    { device: "Google Pixel", os: "7.1" },
-    { device: "Google Nexus 6", os: "6.0" },
-    { device: "Google Nexus 5", os: "4.4" }
+    { device: "Google Pixel", os: "7.1" }
 ];
 
 const randomIntFromInterval = (min, max) => {

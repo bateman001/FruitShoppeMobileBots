@@ -14,7 +14,8 @@ const Path = () => {
             path: "./run-first-test/specs/Path6.js",
             name: "Path6: Failed Cherries Checkout - No Purchase Click (Exp B)"
         },
-        { path: "./run-first-test/specs/Path7.js", name: "Path7: Add Product" }
+        { path: "./run-first-test/specs/Path7.js", name: "Path7: Add Product" },
+        { path: "./run-first-test/specs/Path8.js", name: "Path8: Add Product -> Cart > Checkout > Success" }
     ];
 
     const index = randomIntFromInterval(1, paths.length);
