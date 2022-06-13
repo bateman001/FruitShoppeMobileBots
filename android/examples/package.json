@@ -28,6 +28,8 @@
         "@wdio/browserstack-service": "^7.20.1",
         "browserstack-local": "^1.4.5",
         "dotenv": "^16.0.1",
+        "node-fetch": "^3.2.6",
+        "request": "^2.88.2",
         "wdio": "^6.0.1"
     },
     "type": "commonjs",
@@ -37,7 +39,7 @@
         "@wdio/mocha-framework": "^7.20.0",
         "@wdio/spec-reporter": "^7.20.0",
         "chromedriver": "^102.0.0",
-        "wdio-chromedriver-service": "^7.3.2",
-        "prettier": "2.6.0"
+        "prettier": "2.6.0",
+        "wdio-chromedriver-service": "^7.3.2"
     }
 }

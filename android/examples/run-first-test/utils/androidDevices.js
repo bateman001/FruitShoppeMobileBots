@@ -161,11 +161,11 @@ const ReturnAndroidDevice = () => {
     let index;
     if (deviceType === 1) {
         index = randomIntFromInterval(1, Samsung.length);
-        device = Samsung[index];
+        device = Samsung[index - 1];
     }
     if (deviceType === 2) {
         index = randomIntFromInterval(1, Google.length);
-        device = Google[index];
+        device = Google[index - 1];
     }
 
     return device;

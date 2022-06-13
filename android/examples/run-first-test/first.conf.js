@@ -1,31 +1,35 @@
 const setup = require("./utils/setup");
 require("dotenv").config;
 const device = require("./utils/androidDevices");
+const location = require("./utils/randomLocation");
+const path = require("./utils/choosePath");
 
 global.globalStuff = [];
 global.bsBuildId;
 global.bsSessionId;
 
+console.log("location", location);
 exports.config = {
     user: process.env.BROWSERSTACK_USERNAME || "BROWSERSTACK_USERNAME",
     key: process.env.BROWSERSTACK_ACCESS_KEY || "BROWSERSTACK_ACCESS_KEY",
 
     updateJob: false,
-    specs: ["./run-first-test/specs/Path1.js"],
+    specs: [path.path],
     exclude: [],
 
     capabilities: [
         {
             project: "Fruit Shop Bot Project",
             build: "Webdriverio Android",
-            name: "Path1: Dead Click + Failed Green Bean Checkout",
+            name: path.name,
             device: device.device,
             os_version: device.os,
-            app: process.env.BROWSERSTACK_APP_ID,
+            app: process.env.BROWSERSTACK_TESTING_APP_ID,
             "browserstack.debug": true
         }
     ],
-
+    "browserstack.gpsLocation": `${location.latitude}, ${location.longitude}`,
+    "browserstack.networkLogs": true,
     logLevel: "info",
     coloredLogs: true,
     screenshotPath: "./errorShots/",
